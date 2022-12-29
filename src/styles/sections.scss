@@ -1,0 +1,82 @@
+@use "utils";
+
+:root {
+  &.introductory {
+    p {
+      font-size: 0.9em;
+    }
+  }
+
+  &:not(.introductory) {
+    li em {
+      font-weight: bold;
+    }
+  }
+
+  &.title {
+    @include utils.no-page-numbers;
+
+    * {
+      color: #a81541;
+    }
+
+    text-align: center;
+
+    h1 {
+      font-size: 3.3em;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 2.3em;
+    }
+
+    h3 {
+      color: #b15f08;
+      font-size: 1.15em;
+    }
+
+    h2 + h3 {
+      font-style: italic;
+    }
+
+    footer {
+      display: block;
+      font-style: italic;
+      color: grey;
+    }
+  }
+
+  &.table-of-contents {
+    .contents-box {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    table {
+      font-size: 0.9em;
+    }
+
+    th,
+    td {
+      text-align: center;
+    }
+  }
+
+  &.bibliography {
+    li {
+      font-size: 0.65em;
+      line-height: 0.75em;
+    }
+  }
+
+  &.conclusion {
+    @include utils.no-page-numbers;
+
+    p {
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}

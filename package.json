@@ -1,0 +1,31 @@
+{
+  "description": "Marcadores discursivos en español",
+  "homepage": "https://speakerdeck.com/giancosta86/marcadores-discursivos-en-espanol",
+  "bugs": "https://github.com/giancosta86/marcadores-discursivos/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Gianluca Costa",
+    "email": "gianluca@gianlucacosta.info",
+    "url": "https://gianlucacosta.info/"
+  },
+  "repository": "giancosta86/marcadores-discursivos",
+  "scripts": {
+    "clean": "rimraf dist src/styles/theme.css",
+    "clean:all": "yarn clean && rimraf node_modules",
+    "build": "yarn build:css && yarn build:pdf && yarn build:html",
+    "build:css": "sass src/styles/theme.scss src/styles/theme.css --no-source-map",
+    "build:pdf": "marp src/slides.md --html -o dist/pdf/slides.pdf --theme src/styles/theme.css --allow-local-files --pdf",
+    "build:html": "marp src/slides.md --html -o dist/html/slides.html --theme src/styles/theme.css --allow-local-files",
+    "watch": "yarn build -w"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^2.2.0",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.1"
+  },
+  "engines": {
+    "node": ">=19.3.0"
+  },
+  "private": true
+}
