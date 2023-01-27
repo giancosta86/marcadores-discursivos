@@ -6,7 +6,7 @@ theme: slides
 
 <!-- _class: title -->
 
-### Gianluca Costa [🌐](https://gianlucacosta.info/)
+#### Gianluca Costa [🌐](https://gianlucacosta.info/)
 
 # Marcadores discursivos
 
@@ -14,7 +14,7 @@ theme: slides
 
 ### Un catálogo de patrones lingüísticos
 
-<!-- footer: "Última actualización: 2023-01-24"  -->
+<!-- footer: "Última actualización: 2023-01-27"  -->
 
 ---
 
